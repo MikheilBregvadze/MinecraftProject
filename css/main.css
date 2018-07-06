@@ -18,11 +18,11 @@ body {
 	clear: both;
 }
 .craft_container {
-	width: calc(100% - 190px);
+	max-width: calc(100% - 190px);
 	margin: 0 auto;
 	position: relative;
 }
-.header_img img {
+.header_img {
 	min-height: 350px;
 }
 .header_img  h1 {
@@ -208,12 +208,15 @@ body {
 	margin-top: 10px;
 	transform: rotate(135deg)!important;
 }
-.zoom {
+.zoom_profile {
+	width: 100%;
+}
+.zoom_profile .zoom {
 	position: relative;
-	float: left;
+	display: inline-block;
 	width: 260px;
 	height: 470px;
-	margin-left: 25px;
+	margin-left: 30px;
 	margin-top: 40px;
 	border: 1px solid #dcdcdc;
 	border-bottom: 8px solid #DCDCDC;
@@ -308,7 +311,7 @@ body {
 }
 .load {
 	margin-top: 75px;
-	padding-bottom: 30px;
+	padding-bottom: 75px;
 	color: #5c3baf;
 	text-align: center;
 }
@@ -321,4 +324,92 @@ body {
 .load a:hover {
 	color: #7abb55;
 	border-color: #7abb55;
+}
+.rame {
+	width: 100%;
+}
+@media screen and (max-width: 1120px){
+	.craft_container {
+		margin: 0 auto;
+		width: 100%;
+	}
+	.checkBox {
+		margin-right: 255px;
+		margin-left: 10px;
+	}
+	.checkBox_text {
+		left: 50px;
+		top:5px;
+	}
+	.sort {
+		padding-left: 0 !important;
+	}
+	.sort_box {
+		margin-left: 40px !important;
+	}
+	.zoom_profile {
+		width: 600px;
+		margin: 0 auto;
+	}
+	.zoom_profile {
+		width: 900px;
+		margin-left: calc(50% - 450px);
+	}
+	.zoom:nth-child(4n + 1){
+		margin-left: 35px;
+	}
+}
+@media screen and (max-width: 992px) {
+	.header_img p {
+		padding-left: 20px;
+    	padding-right: 20px;
+	}
+	.left_form{
+		width: 350px;
+		margin-left: calc(50% - 170px);
+		float: none;
+	}
+	.left_form input {
+		margin: 0 auto;
+		width: 100%;
+	}
+	.left_form button {
+		margin-top: 20px;
+		margin-left: 100px;
+    	width: 150px;
+	}
+	.right_form {
+		float: none;
+		width: 290px;
+    	margin-left: calc(50% - 125px);
+    	margin-top: 10px;
+	}
+	.sort {
+		padding-left: 0 !important;
+	}
+	.zoom_profile {
+		width: 600px;
+		margin: 0 auto;
+	}
+	.zoom:nth-of-type(odd){
+		margin-left: 0 !important;
+	}
+	/**/
+	.rame {
+		width: 500px;
+		height: auto;
+	}
+}
+
+@media screen and ( max-width: 769px ) {
+	.zoom_profile {
+		width: 300px;
+		margin: 0 auto;
+	}
+	.zoom {
+		margin-left: 0 !important;
+	}
+	.load {
+		padding-right: 40px;
+	}
 }
